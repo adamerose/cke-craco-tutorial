@@ -10,9 +10,13 @@ import Bold from "@ckeditor/ckeditor5-basic-styles/src/bold";
 import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic";
 import Paragraph from "@ckeditor/ckeditor5-paragraph/src/paragraph";
 
+import Image from '@ckeditor/ckeditor5-image/src/image';
+import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload";
+import Base64UploadAdapter from "@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter";
+
 const editorConfiguration = {
-  plugins: [Essentials, Bold, Italic, Paragraph],
-  toolbar: ["bold", "italic"]
+  plugins: [Essentials, Bold, Italic, Paragraph, Image, ImageUpload, Base64UploadAdapter],
+  toolbar: ["bold", "italic", "imageUpload"]
 };
 
 class App extends Component {
